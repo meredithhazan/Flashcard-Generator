@@ -1,21 +1,27 @@
 
-//var basic = require("./BasicCard.js");
+
 
 function Flash_cloze (text, cloze) {
-	this.text = fullText;
+	this.text = text;
 	this.cloze = cloze;
 }
 
-Flash_cloze.prototype.showPartial = function() {
+Flash_cloze.prototype.createPartial = function() {
 	var partial = this.text.replace(this.cloze, "...");
 	console.log(partial);
 }
 
-var card1 = new Flash_cloze("80s popstars Duran Duran was made up of five members, three of whom shared the last name 'Taylor', although none were related.", "Duran Duran");
-card1.showPartial();
-console.log(card1.text);
-console.log(card1.cloze);
+Flash_cloze.prototype.showCloze = function() {
+	console.log(this.cloze);
+}
 
+Flash_cloze.prototype.showFullText = function() {
+	console.log(this.text);
+}
+
+var card1 = new Flash_cloze("80s popstars Duran Duran was made up of five members, three of whom shared the last name 'Taylor', although none were related.", "Duran Duran");
+
+//card1.createPartial();
 
 
 module.exports = Flash_cloze;
