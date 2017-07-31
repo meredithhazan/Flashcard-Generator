@@ -26,7 +26,7 @@ Flash_cloze.prototype.printCard = function() {
 
 var card1 = new Flash_cloze("80s popstars Duran Duran was made up of five members, three of whom shared the last name 'Taylor', although none were related.", "Duran Duran");
 
-//card1.createPartial();
+
 
 
 module.exports = Flash_cloze;
